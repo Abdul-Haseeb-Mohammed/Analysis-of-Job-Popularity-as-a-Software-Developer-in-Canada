@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 import numpy as np
 
-input_csv_filename = r"C:/Users/abdul/SENG8080-23F-Sec-1/Project Team 5/" + "workopolis_2023-11-22.csv"
+input_csv_filename = r"Project Files/Web_Scraped_Data/" + "workopolis_2023-11-22.csv"
 
 df = pd.read_csv(input_csv_filename)
 
@@ -64,4 +64,4 @@ date_from_filename = input_csv_filename.split("_")[1].split(".csv")[0]
 output_csv_filename = f"cleaned_workopolis_{date_from_filename}.csv"
 
 # Save the cleaned data to a CSV file
-df.to_csv(r"C:/Users/abdul/SENG8080-23F-Sec-1/Project Team 5/" + output_csv_filename, index=False)
+df.to_csv(r"Project Files/Cleaned_Data/" + output_csv_filename, index=False)

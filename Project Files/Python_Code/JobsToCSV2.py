@@ -14,7 +14,7 @@ import time
 url = "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=software+developer&locationstring=Elmira%2C+ON"
 
 # Initialize ChromeDriver
-driver_service = ChromeService(executable_path="C:\webdriver\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+driver_service = ChromeService(executable_path="Project Files\Additional_Files\chromedriver.exe")
 driver = webdriver.Chrome(service=driver_service)
 
 # Navigate to the URL
@@ -25,7 +25,7 @@ driver.implicitly_wait(10)
 
 # Create a CSV file for saving job listings
 filename = "jobbank_" + datetime.now().strftime("%Y-%m-%d") + ".csv"
-csv_filename = r"C:/Users/abdul/SENG8080-23F-Sec-1/Project Team 5/" + filename
+csv_filename = r"Project Files/Web_Scraped_Data/" + filename
 
 # Create the necessary directory structure if it doesn't exist
 os.makedirs(os.path.dirname(csv_filename), exist_ok=True)

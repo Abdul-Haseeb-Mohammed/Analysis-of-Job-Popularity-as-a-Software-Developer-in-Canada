@@ -10,10 +10,9 @@ from datetime import datetime
 
 # Define the URL of the job search page
 url = "https://www.workopolis.com/jobsearch/find-jobs?ak=software%20developer&l=Elmira%2C%20ON"
-#url = "https://www.workopolis.com/jobsearch/find-jobs?ak=software%20developer&l=elmira%20ontario"
 
 # Initialize ChromeDriver
-driver_service = ChromeService(executable_path="C:\webdriver\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+driver_service = ChromeService(executable_path="Project Files\Additional_Files\chromedriver.exe")
 driver = webdriver.Chrome(service=driver_service)
 
 # Navigate to the URL
@@ -21,7 +20,7 @@ driver.get(url)
 print()
 # Create a CSV file for saving job listings
 filename =  "workopolis_" + datetime.now().strftime("%Y-%m-%d") + ".csv"
-csv_filename = r"C:/Users/abdul/SENG8080-23F-Sec-1/Project Team 5/" + filename
+csv_filename = r"Project Files/Web_Scraped_Data/" + filename
 
 #now you can open CSV and write to file
 with open(csv_filename, mode='w', newline='', encoding='utf-8') as csv_file:
